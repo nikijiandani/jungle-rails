@@ -3,7 +3,7 @@
     <dd><span class="text-muted">Created at: <%= review.created_at %></span></dd>
     <dd>Rating: <%= review.rating %>/5</dd>
     <dd><%= review.description %></dd>
-    <% if current_user && current_user.first_name == review.user.first_name %> 
+    <% if current_user && current_user.email == review.user.email %> 
     <dd><%= button_to 'Delete Review', [review.product, review],
                     method: :delete,
                     class: 'btn btn-danger',
