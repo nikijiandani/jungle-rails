@@ -1,0 +1,12 @@
+<dl class="review">
+    <dt><%= review.user.first_name %></dt>
+    <dd><%= review.created_at %></dd>
+    <dd>Rating: <%= review.rating %>/5</dd>
+    <dd><%= review.description %></dd>
+    <% if current_user && current_user.first_name == review.user.first_name %> 
+    <dd><button><%= link_to 'Delete Review', [review.product, review],
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
+    </button></dd>
+    <% end %>
+</dl>

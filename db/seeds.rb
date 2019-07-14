@@ -6,6 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+puts "Creating User..."
+
+User.create({
+  first_name: "Blueberry",
+  last_name: "Pie",
+  email: "blueberry@gmail.com",
+  password_digest: "$2a$10$k3VldBXZFrIVLiLSWQ.XOuW7q0cqSokNPjEr2nfk7o/6KqWnVgLwC"
+})
+
+
 puts "Seeding Data ..."
 
 # Helper functions
@@ -132,5 +142,25 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+
+puts "DONE!"
+
+puts "Recreating Reviews..."
+
+Review.destroy_all
+
+product_ids = Product.all.pluck(:id)
+user_ids = User.all.pluck(:id)
+
+20.times do
+  product_id = product_ids.sample
+  user = User.find(user_ids.sample)
+  
+  Product.find(product_id).reviews.create({
+    user: user,
+    description: Faker::Hipster.paragraph(4),
+    rating: rand(0..5)
+  })
+end
 
 puts "DONE!"
