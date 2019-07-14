@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   
   root to: 'products#index'
   resources :users, only: [:new, :create]
-  resources :products, only: [:index, :show]
+  resources :products, only: [:index, :show] do
+    resources :reviews, only: [:create, :destroy]
+  end
   resources :categories, only: [:show]
 
   # these routes are for showing users a login form, logging them in, and logging them out.
