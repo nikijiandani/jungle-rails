@@ -1,12 +1,13 @@
 <dl class="review">
     <dt><%= review.user.first_name %></dt>
-    <dd><%= review.created_at %></dd>
+    <dd><span class="text-muted">Created at: <%= review.created_at %></span></dd>
     <dd>Rating: <%= review.rating %>/5</dd>
     <dd><%= review.description %></dd>
     <% if current_user && current_user.first_name == review.user.first_name %> 
-    <dd><button><%= link_to 'Delete Review', [review.product, review],
+    <dd><%= button_to 'Delete Review', [review.product, review],
                     method: :delete,
+                    class: 'btn btn-danger',
                     data: { confirm: 'Are you sure?' } %>
-    </button></dd>
+    </dd>
     <% end %>
 </dl>
