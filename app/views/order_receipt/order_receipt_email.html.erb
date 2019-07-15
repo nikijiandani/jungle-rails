@@ -1,17 +1,12 @@
-<section class="orders-show">
-
-  <header class="page-header">
-    <h1>Order Summary #<%= @order.id %></h1>
-  </header>
+<p>Hi <%= @user.first_name %></p>
+<p>Here is your order summary: </p>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
-    <h4>A confirmation email has been sent to <%= @order.email %></h4>
     <div class="panel panel-default items">
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th colspan="2">Product</th>
+            <th>Product</th>
             <th>Unit Price</th>
             <th>Quantity</th>
             <th>Item Totals</th>
@@ -28,7 +23,7 @@
               ORDER TOTAL:
             </th>
             <th>
-              <%= @order.total_cents / 100.0 %>
+              $<%= @order.total_cents / 100.0 %>
             </th>
           </tr>
         </tfoot>
@@ -36,6 +31,4 @@
     </div>
   </div>
 
-  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
-
-</section>
+<p>Thanks for placing your order! Please check back often.</p>
