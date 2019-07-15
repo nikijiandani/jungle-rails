@@ -9,7 +9,10 @@
     <%= product.description %>
   </p>
   <p class="rating">
-    Average Rating: <%= product.reviews.all.average(:rating)%>/5
+    Average Rating: 
+    <% if product.reviews.all.average(:rating) %>
+      <%= product.reviews.all.average(:rating).round(1) %> /5
+    <% end %>
   </p>
   <p class="reviews text-muted">
     <%= pluralize product.reviews.length, 'Customer Review' %>

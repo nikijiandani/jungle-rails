@@ -11,10 +11,10 @@ class ReviewsController < ApplicationController
     @review = @product.reviews.new(review_params)
     @review.user = current_user
     @review.product_id = @product.id
-    p @review
     if @review.save
       redirect_to product_path(@product)
     else
+      # to do: Add error messages here...
       redirect_to product_path(@product)
     end
   end
