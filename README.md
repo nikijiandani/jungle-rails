@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. Forked and cloned from [https://github.com/lighthouse-labs/jungle-rails](https://github.com/lighthouse-labs/jungle-rails)
 
 
 ## Setup
