@@ -2,6 +2,28 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. Forked and cloned from [https://github.com/lighthouse-labs/jungle-rails](https://github.com/lighthouse-labs/jungle-rails)
 
+## Final Product
+
+### Home Page/ Catalogue
+A visitor can can view the overall rating of products as they browse the catalog.
+!["home page"](/app/assets/images/home_page.gif)
+
+### Product Show Page
+A visitor can view the list of ratings and reviews when viewing the product detail page.
+!["product show page"](/app/assets/images/product_show.png)
+
+### Login Page
+A Visitor can sign in using their e-mail and password.
+!["login page"](/app/assets/images/login.png)
+
+### New User Registration Page
+A Visitor can sign up for a user account with an e-mail, password, first name and last name.
+!["user registration page"](/app/assets/images/user_registration.png)
+
+### Create Reviews
+A logged in user can rate & review a product in a single step.
+!["create review"](/app/assets/images/create_review.gif)
+
 
 ## Setup
 
