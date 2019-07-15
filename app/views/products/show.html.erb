@@ -32,12 +32,12 @@
 
           <%= form_for([@product, @product.reviews.build]) do |f| %>
             <p>
-              <%= f.label :description %>:<br/>
+              <%= f.label :description %>:<span>*</span><br/>
               <%= text_area_tag 'description', "", class: 'form-control' %>
             </p>
             <p>
-              <%= f.label :rating %>:
-              <%= select_tag "rating", raw("<option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>") %>
+              <%= f.label :rating %>: 
+              <%= select_tag "rating", raw("<option></option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>"), class: 'form-control' %>
             </p>
             <p>
               <%= f.submit 'Create Review', class: 'btn btn-primary'%>
