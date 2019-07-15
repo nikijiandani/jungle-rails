@@ -1,0 +1,14 @@
+<tr>
+  <td>
+    <h4><%= line_item.product.name %></h4>
+  </td>
+  <td>
+    $<%= line_item.item_price_cents / 100.0 %>
+  </td>
+  <td>
+    <%= line_item.quantity %>
+  </td>
+  <td>
+    $<%= line_item.total_price_cents / 100.0 %>
+  </td>
+</tr>

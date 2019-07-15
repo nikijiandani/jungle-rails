@@ -37,5 +37,12 @@ module Jungle
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Set host that will be used in all mailers
+    config.action_mailer.default_url_options = { host: "jungle.com" }
+
+    #set preview path for mailers
+    config.action_mailer.preview_path = "#{Rails.root}/lib/mailer_previews"
+
   end
 end

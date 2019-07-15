@@ -1,0 +1,9 @@
+Hi <%= @user.first_name %>,
+Here is your order summary:
+Product | Unit Price | Quantity | Item Totals |
+<% @order.line_items.each do |item| %>
+  <%= render 'item', line_item: item %>
+<% end %>
+ORDER TOTAL: $<%= @order.total_cents / 100.0 %>
+
+Thanks for placing your order! Please check back often.
