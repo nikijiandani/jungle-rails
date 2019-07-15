@@ -8,12 +8,12 @@
     <p><%= line_item.product.description %></p>
   </td>
   <td>
-    <%= line_item.item_price_cents / 100.0 %>
+    $<%= line_item.item_price_cents / 100.0 %>
   </td>
   <td>
     <%= line_item.quantity %>
   </td>
   <td>
-    <%= line_item.total_price_cents / 100.0 %>
+    $<%= line_item.total_price_cents / 100.0 %>
   </td>
 </tr>
